@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
         echo 'main branch'
+        currentBuild.displayName = "2.0.${env.BUILD_ID}"
       }
     }
     stage('for stage branch') {
@@ -15,6 +16,7 @@ pipeline {
       }
       steps {
         echo 'stage branch'
+        currentBuild.displayName = "1.9.${env.BUILD_ID}"
       }
     }
     stage('for pull request') {
