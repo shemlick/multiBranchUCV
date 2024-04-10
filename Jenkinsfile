@@ -14,7 +14,7 @@ pipeline {
     }
     stage('for stage branch') {
       when {
-        branch 'stage'
+        branch '1.9'
       }
       steps {
         echo 'stage branch'
